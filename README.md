@@ -36,3 +36,117 @@ JS引擎 将 JS代码 转换为 机器码/字节码
 
 官网：[https://nodejs.org/en/](https://nodejs.org/en/)
 
+## 官网给出的 Node 的介绍
+
+Node.js 是一个构建于 Chrome V8 引擎之上的 JavaScript 运行时环境
+
+Node.js 使用 事件驱动，非阻塞 I/O 模型，这使得它非常轻量，高效。
+
+Node.js 包管理生态，npm，是世界上最大的开源库生态系统
+
+## 3m安装法
+
+[nvm](https://github.com/creationix/nvm) （Node Version Manager）
+
+解决多版本共存、切换问题
+
+[npm](https://github.com/npm/npm)   (Node Package Manager)  
+
+解决 Node.js 模块安装问题
+
+[nrm](https://github.com/Pana/nrm)    (NPM Registry Manager)
+
+解决 npm 镜像访问慢，提供测试，切换
+
+## NVM
+
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
+
+下载nvm, 并将路径配置到 ~/.bashrc 中
+
+注: 如果终端是zsh，则需要配置到~/.zshrc 中(可通过 echo $0 查询)
+
+## NVM 常用命令
+
+nvm  --version  查看当前版本
+
+nvm ls 查看当前已安装 node 的版本
+
+nvm ls-remote 查看远程 node 的版本
+
+nvm install 4.4.5 安装某版本 node
+
+nvm use 4.4.5 使用某版本 node 
+
+nvm alias default 4.4.5 把某版本 node 设为默认值
+
+## NPM
+
+安装完 Node 后自带 npm
+
+npm -v 查询当前npm版本
+
+npm install npm -g 通过 npm 更新 npm
+
+npm install 模块名 
+
+[常用 npm 模块一览](https://github.com/ruanyf/articles/blob/master/2015/2015-04-04-npm-modules.md)
+
+## NRM
+
+npm install -g nrm
+
+nrm test 
+
+nrm ls
+
+nrm use taobao
+
+## CommonJS
+
+CommonJS API定义很多普通应用程序（主要指非浏览器的应用）使用的API，从而填补了这个空白。它的终极目标是提供一个类似Python，Ruby和Java标准库。这样的话，开发者可以使用CommonJS API编写应用程序，然后这些应用可以运行在不同的JavaScript解释器和不同的主机环境中
+
+## CommonJS可以做
+
+在兼容CommonJS的系统中，你可以使用JavaScript开发：
+
+服务器端JavaScript应用程序
+命令行工具
+图形界面应用程序
+混合应用程序（如，Titanium或Adobe AIR）
+
+## CommonJS规范
+
+模块（modules）
+
+包（packages）
+
+系统（system）
+
+二进制（binary）
+
+控制台（console）
+
+编码（encodings）
+
+文件系统（filesystems）
+
+套接字（sockets)
+
+单元测试（unit test）
+
+## CommonJS对模块的定义
+
+require - 用来引入依赖
+
+export - 用来导出模块，包括标识符(identifier)和模块内容(contents)
+
+module.exports
+
+exports.xxx
+
+## NodeJS和CommonJS之间的关系
+
+CommonJS是一种规范，而Node.js是这种规范的实现
+
+Node.js只是实现了部分CommonJS的规范
